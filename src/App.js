@@ -2,8 +2,14 @@ import React, { useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./utils/Themes";
 import Sidebar from "./components/Sidebar";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import Dashboard from "./pages/Dashboard";
+import Search from "./pages/Search";
+import Favourites from "./pages/Favourites";
+import Profile from "./pages/Profile";
+import PodcastDetails from "./pages/PodcastDetails";
+import DisplayPorcast from "./pages/DisplayPorcast";
 
 const Container = styled.div`
   display: flex;
@@ -36,7 +42,18 @@ const App = () => {
           )}
           <Frame>
             <NavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            app
+            <Routes>
+              <Route path='/' exact element={<Dashboard />} />
+              <Route path='/search' exact element={<Search />} />
+              <Route path='/favourites' exact element={<Favourites />} />
+              <Route path='/profile' exact element={<Profile />} />
+              <Route path='/podcast/:id' exact element={<PodcastDetails />} />
+              <Route
+                path='/showpodcasts/:type'
+                exact
+                element={<DisplayPorcast />}
+              />
+            </Routes>
           </Frame>
         </Container>
       </BrowserRouter>
