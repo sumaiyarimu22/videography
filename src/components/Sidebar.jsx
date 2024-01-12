@@ -19,6 +19,7 @@ const MenuContainer = styled.div.attrs((props) => ({
   flex-direction: column;
   height: 100vh;
   display: flex;
+  padding: 0px 2rem 0 0;
   background-color: ${({ theme }) => theme.bg};
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 1100px) {
@@ -32,10 +33,6 @@ const MenuContainer = styled.div.attrs((props) => ({
       menuOpen === undefined ? "none" : "left 0.3s ease-in-out"};
   }
 `;
-
-// ... rest of the code
-
-// ... rest of the code
 
 const Flex = styled.div`
   display: flex;
@@ -63,7 +60,7 @@ const Close = styled.div`
 const Elements = styled.div`
   padding: 4px 16px;
   display: flex;
-  flex-direction: flex-start;
+  cursor: pointer;
   align-items: center;
   gap: 12px;
   color: ${({ theme }) => theme.text_secondary};
