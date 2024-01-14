@@ -26,7 +26,7 @@ const PodcastCart = () => {
           <Decryption>
             The Tim Ferriss Show explores peak performance, life hacks, and
             success through in-depth interviews with influential individuals,
-            offering actionable insights.
+            offering actionable insight.
           </Decryption>
           <Creator>
             <Avatar>A</Avatar>
