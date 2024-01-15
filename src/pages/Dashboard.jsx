@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import PodcastCart from "../components/PodcastCart";
+import PodcastCart from "../components/PodcastCart.jsx";
 
 const DashboardMein = styled.div`
   padding: 20px 30px;
@@ -41,7 +41,14 @@ const Span = styled.div`
     font-size: 14px;
   }
 `;
-const Podcasts = styled.div``;
+const Podcasts = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 18px 6px;
+
+  justify-content: center;
+`;
 
 const Dashboard = () => {
   return (
